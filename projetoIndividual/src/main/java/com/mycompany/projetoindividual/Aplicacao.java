@@ -14,10 +14,10 @@ public class Aplicacao {
         Scanner leitorString = new Scanner(System.in);
 
         // Mensagem Inicial
-        System.out.println("-".repeat(75));
+        System.out.println("-".repeat(73));
         System.out.println("Simplifique a sua vida, faça parte do Banco Bat - Desenvolvido para você!\n"
                 + "          $$  Soluções simples, seguras e 100% digitais.  $$");
-        System.out.println("-".repeat(75));
+        System.out.println("-".repeat(73));
 
         // Valores corretos
         Integer agenciaCorreta = 1175;
@@ -53,11 +53,11 @@ public class Aplicacao {
 
         // Menu 
         while (respostaUsuario != 4) {
-            System.out.println("-".repeat(40));
+            System.out.println("-".repeat(73));
             System.out.println(String.format("Seja Bem Vindo, %s! \n"
                     + "[1] - Depósito \n[2] - Saque\n[3] - Saldo \n[4] - Encerrar\n"
                     + "[5] - Investir", nomeDigitado));
-            System.out.println("-".repeat(40));
+            System.out.println("-".repeat(73));
             respostaUsuario = leitorNumerico.nextInt();
 
             switch (respostaUsuario) {

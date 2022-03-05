@@ -20,6 +20,7 @@ public class ServicosDaConta {
             SaldoAtual = depositoDigitado + SaldoAtual;
 
         }
+        System.out.println("Depósito realizado com sucesso!");
 
     }
 
@@ -59,7 +60,7 @@ public class ServicosDaConta {
                 SaldoAtual = SaldoAtual + valorInvestimento;
                 System.out.println(String.format("Parabéns, você acertou e lucrou! \n"
                         + "Saldo Atual: %.2f \n"
-                        + "Jogar Novamente!", SaldoAtual));
+                        + "Investir Novamente!", SaldoAtual));
             }
         } else {
             System.out.printf("Saldo Inválido! \nSaldo Atual: %.2f\n", SaldoAtual);
