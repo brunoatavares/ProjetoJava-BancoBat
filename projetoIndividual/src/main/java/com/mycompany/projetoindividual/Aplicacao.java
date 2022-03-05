@@ -70,6 +70,7 @@ public class Aplicacao {
                 case 3:
                     deposito.Saldo();
                     break;
+                // Validando o comando [4] Encerrar/Sair
                 case 4:
                     System.out.println("-".repeat(40));
                     System.out.println("Muito obrigado por utilizar nossos serviços!! \n"

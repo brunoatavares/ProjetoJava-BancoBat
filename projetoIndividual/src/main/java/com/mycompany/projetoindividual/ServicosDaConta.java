@@ -6,9 +6,11 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class ServicosDaConta {
 
+    // Variável global e o leitor dos campos de input
     Double SaldoAtual = 0.00;
     Scanner leitorNumerico = new Scanner(System.in);
 
+    // Validando o método do [1] Depósito
     void Deposito() {
         Locale.setDefault(Locale.US);
 
@@ -24,6 +26,7 @@ public class ServicosDaConta {
 
     }
 
+    // Validando o método do [2] Saque
     void Saque() {
         Locale.setDefault(Locale.US);
 
@@ -38,11 +41,13 @@ public class ServicosDaConta {
 
     }
 
+    // Validando o método do [3] Saldo
     void Saldo() {
         System.out.printf("Seu saldo: %.2f \n", SaldoAtual);
 
     }
 
+    // Validando o método do [5] Investir
     void Trade() {
         System.out.println("-".repeat(40));
         System.out.println(">> Investir nunca foi tão fácil <<");
