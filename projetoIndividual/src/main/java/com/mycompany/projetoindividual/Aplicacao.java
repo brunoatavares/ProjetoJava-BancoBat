@@ -1,25 +1,28 @@
 package com.mycompany.projetoindividual;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Aplicacao {
 
     public static void main(String[] args) {
 
+        Locale.setDefault(Locale.US);
+
         // Validando leitores 
         Scanner leitorNumerico = new Scanner(System.in);
         Scanner leitorString = new Scanner(System.in);
+
+        // Mensagem Inicial
+        System.out.println("-".repeat(75));
+        System.out.println("Simplifique a sua vida, faça parte do Banco Bat - Desenvolvido para você!\n"
+                + "          $$  Soluções simples, seguras e 100% digitais.  $$");
+        System.out.println("-".repeat(75));
 
         // Valores corretos
         Integer agenciaCorreta = 1175;
         String contaCorreta = "05397-2";
         Integer senhaCorreta = 1234;
-        Boolean logado = false;
-
-        // Mensagem Inicial
-        System.out.println("-".repeat(40));
-        System.out.println("  Banco Bat - Desenvolvido para você!");
-        System.out.println("-".repeat(40));
 
         // Captação 
         System.out.println("Digite seu nome:");
@@ -52,7 +55,8 @@ public class Aplicacao {
         while (respostaUsuario != 4) {
             System.out.println("-".repeat(40));
             System.out.println(String.format("Seja Bem Vindo, %s! \n"
-                    + "1 - Depósito \n2 - Saque\n3 - Saldo \n4 - Encerrar", nomeDigitado));
+                    + "[1] - Depósito \n[2] - Saque\n[3] - Saldo \n[4] - Encerrar\n"
+                    + "[5] - Investir", nomeDigitado));
             System.out.println("-".repeat(40));
             respostaUsuario = leitorNumerico.nextInt();
 
@@ -73,8 +77,12 @@ public class Aplicacao {
                     System.out.println("-".repeat(40));
                     respostaUsuario = 4;
                     break;
+                case 5:
+                    deposito.Trade();
+                    break;
                 default:
-                    throw new AssertionError();
+                    System.out.println("Opção inválida! \nTente Novamente!");
+
             }
         }
     }
