@@ -27,10 +27,11 @@ public class Aplicacao {
         // Captação 
         System.out.println("Digite seu nome:");
         String nomeDigitado = leitorString.nextLine();
-        System.out.println("Conta:");
-        String contaDigitada = leitorNumerico.nextLine();
         System.out.println("Agência:");
         Integer agenciaDigitada = leitorNumerico.nextInt();
+        System.out.println("Conta:");
+        String contaDigitada = leitorNumerico.nextLine();
+        leitorString.nextLine();
 
         // Validações dos campos inseridos pelo usuário
         while (!agenciaCorreta.equals(agenciaDigitada) && !contaCorreta.equals(contaDigitada)) {
@@ -43,7 +44,7 @@ public class Aplicacao {
             agenciaDigitada = leitorNumerico.nextInt();
             System.out.println("Conta:");
             contaDigitada = leitorNumerico.nextLine();
-
+            leitorString.nextLine();
         }
         // Mensagem OK
         System.out.println("Logado com Sucesso!");
